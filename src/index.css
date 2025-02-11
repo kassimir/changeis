@@ -49,6 +49,7 @@ main {
 
 .card-title, .card-url {
   background-color: darkslategrey;
+  color: white;
 }
 
 .card-title, .card-description, .card-url {
@@ -127,6 +128,7 @@ main {
   background-color: darkslategrey;
   position: relative;
   z-index: 2;
+  color: white;
 }
 
 .expansion-description {
