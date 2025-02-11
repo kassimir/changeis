@@ -1,7 +1,7 @@
 import {FC} from 'react';
 import {FakerData} from '../types/fakerData';
 
-const Card: FC = ({title, description, url}: FakerData) => {
+const Card: FC<FakerData> = ({title, description, url}) => {
   return (
     <div className="card">
       <div className="card-title">{title}</div>

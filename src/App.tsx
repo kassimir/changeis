@@ -21,7 +21,7 @@ function App() {
   const [fakerData, setFakerData] = useState<FakerData[]>([]);
 
   useEffect(() => {
-    fetch<Promise<Response>>(APIURL)
+    fetch(APIURL)
       .then((response: Response): Promise<FakerReturn> => response.json())
       .then((data: FakerReturn): void => setFakerData(data.data));
   }, []);

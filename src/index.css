@@ -152,3 +152,7 @@ main {
   padding: 0 1em;
   transform: translateY(-2px);
 }
+
+div.description {
+  margin-bottom: 1em;
+}

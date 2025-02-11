@@ -1,7 +1,12 @@
-import { FC } from 'react';
+import { FC, Dispatch, SetStateAction } from 'react';
 
-const Header: FC = ({selectors, setSelected, defaultValue}) => {
+type HeaderProps = {
+  selectors: string[];
+  setSelected: Dispatch<SetStateAction<number>>;
+  defaultValue: number;
+}
 
+const Header: FC<HeaderProps> = ({selectors, setSelected, defaultValue}) => {
   return (
     <div id="header">
       <ul>

@@ -6,7 +6,7 @@ const enum FLIP_STATE {
   HIDE = 'hide'
 }
 
-const ExpansionPanel: FC = ({title, description, url}: FakerData) => {
+const ExpansionPanel: FC<FakerData> = ({title, description, url}: FakerData) => {
   const [display, setDisplay] = useState<FLIP_STATE.HIDE | FLIP_STATE.SHOW>(FLIP_STATE.HIDE);
 
   function toggleDescription(): void {
@@ -16,7 +16,10 @@ const ExpansionPanel: FC = ({title, description, url}: FakerData) => {
   return (
     <div className="expansion">
       <div className="expansion-title" onClick={toggleDescription}>{title}</div>
-      <div className={`expansion-description ${display}`}>{description}</div>
+      <div className={`expansion-description ${display}`}>
+        <div className="description">{description}</div>
+        <div>{url}</div>
+      </div>
     </div>
   )
 }
